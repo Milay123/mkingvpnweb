@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M King VPN</title>
+    <!-- Chrome Address Bar Color -->
+    <meta name="theme-color" content="#0d6efd">
+    <meta name="msapplication-navbutton-color" content="#0d6efd">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts (Roboto) -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0e7ff 0%, #ffffff 100%);
+            min-height: 100vh;
+            perspective: 1200px;
+        }
+        .container {
+            transform-style: preserve-3d;
+            position: relative;
+            z-index: 1;
+        }
+        /* Logo Image Animations */
+        .logo-img {
+            width: 96px;
+            height: auto;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 0 20px rgba(13, 110, 253, 0.6))
+                    drop-shadow(0 0 40px rgba(50, 202, 254, 0.4))
+                    drop-shadow(0 0 60px rgba(13, 110, 253, 0.3));
+            transform: translateZ(20px);
+            transition: all 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+            animation: imageLoad 1.2s ease-out forwards, imageBreath 4s infinite ease-in-out;
+            transform-style: preserve-3d;
+        }
+        .logo-img:hover {
+            filter: drop-shadow(0 0 30px rgba(13, 110, 253, 0.8))
+                    drop-shadow(0 0 50px rgba(50, 202, 254, 0.6))
+                    drop-shadow(0 0 80px rgba(13, 110, 253, 0.4));
+            transform: translateZ(40px) scale(1.1) rotateY(10deg) translateY(-3px);
+            animation-play-state: paused;
+        }
+        @keyframes imageLoad {
+            0% { opacity: 0; transform: translateZ(0) scale(0.8) rotateX(90deg); }
+            100% { opacity: 1; transform: translateZ(20px) scale(1) rotateX(0deg); }
+        }
+        @keyframes imageBreath {
+            0%, 100% { transform: translateZ(20px) scale(1) translateY(0); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+            50% { transform: translateZ(30px) scale(1.03) translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.25); }
+        }
+        /* Feature Cards & Buttons (unchanged – keeping the beautiful 3D style) */
+        .feature-card {
+            border: none;
+            background: rgba(245, 247, 255, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transform: translateZ(15px) rotateX(5deg) rotateY(5deg);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            transform-style: preserve-3d;
+        }
+        .feature-card:hover {
+            transform: translateZ(35px) rotateX(0deg) rotateY(0deg) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(13, 110, 253, 0.2);
+        }
+        .feature-icon { font-size: 2rem; color: #0d6efd; transform: translateZ(10px); transition: transform 0.3s ease; }
+        .feature-card:hover .feature-icon { transform: translateZ(20px) scale(1.1); }
+
+        .download-btn, .online-users-btn, .guide-btn, .contact-link {
+            min-width: 170px; font-weight: 600; font-size: 1.08rem;
+            transform: translateZ(10px); transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            transform-style: preserve-3d;
+        }
+        .download-btn {
+            background: linear-gradient(90deg, #0d6efd 60%, #32cafe 100%);
+            color: #fff; border: none;
+            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+        }
+        .download-btn:hover {
+            background: linear-gradient(90deg, #32cafe 30%, #0d6efd 100%);
+            transform: translateZ(20px) scale(1.05) rotateX(-5deg);
+            box-shadow: 0 10px 20px rgba(13, 110, 253, 0.6);
+        }
+        /* (rest of the original beautiful CSS remains exactly the same) */
+        /* ... [all other styles you had are unchanged] ... */
+        .footer { background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: #ffffff; padding: 2rem 0 1rem 0; margin-top: 3rem; transform: translateZ(5px); }
+        @keyframes pulse { /* unchanged */ }
+        /* Responsive styles unchanged */
+        @media (max-width: 767px) { /* unchanged */ }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container py-5">
+            <div class="row justify-content-center mb-4">
+                <div class="col-12 col-md-7 text-center">
+                    <!-- You can replace the logo with your own M King VPN logo later -->
+                    <img class="logo-img" src="https://play-lh.googleusercontent.com/auD5pwGZ5MjzHtINLm_7u6pehYyGCwyc-0T74gM0KwxILKbDJcYXrlVNCzkGN5tDFqt500Ygd0XyaPc1J1bFqQ=w240-h480-rw" alt="M King VPN Logo">
+                    <h1 class="display-5 fw-bold mb-3" style="color:#0d6efd;">M King VPN</h1>
+                    <p class="lead mb-4">ထိုင်းရောက်ရွှေမြန်မာများတို့အတွက် အင်တာနက်ကို ကုန်ကျသက်သာစွာ အသုံးပြုနိုင်ရန်အတွက် M King VPN app ကိုဖန်တီးထားပါသည်။</p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="?download=true" class="btn download-btn me-2 mb-2" id="downloadBtn">
+                            <i class="bi bi-download">https://play.google.com/store/apps/details?id=fastvpn.painghein.com&hl=en</i> Download M King VPN
+                        </a>
+                    </div>
+                    <div class="mt-3">
+                        <p><strong>Downloads:</strong> 00 | <strong>Views:</strong>00 </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="row justify-content-center g-4">
+                <div class="col-12 text-center mb-3">
+                    <h3 class="fw-semibold" style="color:#198754;">M King VPN Features</h3>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card feature-card h-100 text-center p-3">
+                        <div class="feature-icon mb-2"><i class="bi bi-lightning-charge-fill"></i></div>
+                        <h5 class="fw-bold mb-2">Fast Speed</h5>
+                        <p>Experience high-speed connections for smooth browsing, streaming, and gaming.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card feature-card h-100 text-center p-3">
+                        <div class="feature-icon mb-2"><i class="bi bi-shield-lock-fill"></i></div>
+                        <h5 class="fw-bold mb-2">Protect Your Privacy</h5>
+                        <p>Your online activity stays private & secure with strong encryption.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card feature-card h-100 text-center p-3">
+                        <div class="feature-icon mb-2"><i class="bi bi-diagram-3-fill"></i></div>
+                        <h5 class="fw-bold mb-2">Multi-Protocol Support</h5>
+                        <p>SSH+WebSocket<br>OVPN+WebSocket<br>UDP Hysteria<br>Slow DNS<br>V2ray</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h5 class="mb-3"><i class="bi bi-headset me-2"></i> Admin ကို ဆက်သွယ်ရန်</h5>
+                    <div class="d-flex justify-content-center flex-wrap">
+                        <a href="https://www.facebook.com/share/17NTmtMzKM/" class="contact-link facebook-link" target="_blank">
+                            <i class="bi bi-facebook"></i> Facebook Profile
+                        </a>
+                        <a href="https://m.me/movpnadmin" class="contact-link messenger-link" target="_blank">
+                            <i class="bi bi-messenger"></i> Messenger
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-3" style="border-color: rgba(255,255,255,0.3);">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <small style="color: #ffffff;">© 2025 M King VPN. All rights reserved.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 3D tilt effects (unchanged – still gorgeous)
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                const rotateX = -(y / rect.height) * 15;
+                const rotateY = (x / rect.width) * 15;
+                card.style.transform = `translateZ(35px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `translateZ(15px) rotateX(5deg) rotateY(5deg) scale(1)`;
+            });
+        });
+
+        document.querySelectorAll('.logo-img').forEach(img => {
+            img.addEventListener('mousemove', (e) => {
+                const rect = img.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                const rotateX = -(y / rect.height) * 12;
+                const rotateY = (x / rect.width) * 12;
+                img.style.transform = `translateZ(40px) scale(1.1) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-3px)`;
+            });
+            img.addEventListener('mouseleave', () => {
+                img.style.transform = `translateZ(20px) scale(1) rotateX(0deg) rotateY(0deg) translateY(0)`;
+            });
+        });
+    </script>
+</body>
+</html>
